@@ -44,9 +44,20 @@ android {
 dependencies {
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("com.google.firebase:firebase-storage:20.3.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
 
+    // FirebaseUI for Firebase Realtime Database
+    implementation("com.firebaseui:firebase-ui-database:8.0.2")
+
+    // FirebaseUI for Firebase Auth
+    implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
+
+    // Add the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-storage")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
